@@ -8,5 +8,5 @@ console.log(alphabet);
 alphabet = "Now I know my " + first + ", " + second + ", " + third + "'s";
 console.log(alphabet);
 
-alphabet = `Now I know my ${first}, ${second}, ${third}'s  `;
+alphabet = `Now I know my ${first}, ${second}, ${third}'s`;
 console.log(alphabet);

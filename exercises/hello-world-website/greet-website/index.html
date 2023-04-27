@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greet Website</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <form action="">
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" id="firstName" value="Sasha" />
+        <br />
+        <label for="age">Age</label>
+        <input type="text" name="age" id="age" value="29" />
+        <br />
+        <button>Greet</button>
+        <h1 id="greetingMessage"></h1>
+      </form>
+    </main>
+    <footer></footer>
+    <script>
+      //get your HTML Elements into variables
+      const firstNameElement = document.getElementById("firstName");
+      const ageElement = document.getElementById("age");
+      const greetingElement = document.getElementById("greetingMessage");
+
+      //get values out of the form inputs
+      const firstName = firstNameElement.value;
+      const age = ageElement.value;
+
+      //create the message
+      //"Hello Sasha. Congrats on making it to age 29."
+      let message = `Hello ${firstName}. Congrats on making it to age ${age}!!`;
+      // display the message
+      greetingElement.innerHTML = message;
+
+    </script>
+  </body>
+</html>
