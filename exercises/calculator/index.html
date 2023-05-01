@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.12/mvp.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <h1>Calculator</h1>
+      <form>
+        <label for="number1">First Number</label>
+        <input type="number" name="number1" id="number1" placeholder="enter a number" />
+        <label for="number2">Second Number</label>
+        <input type="number" name="number2" id="number2" placeholder="enter a number" />
+
+        <button type="button" onclick="calculate('+')">Add</button>
+        <button type="button" onclick="calculate('-')">Subtract</button>
+        <button type="button" onclick="calculate('*')">Multiply</button>
+        <button type="button" onclick="calculate('/')">Divide</button>
+
+        <label for="result">Result</label>
+        <input type="number" name="result" id="result" readonly />
+      </form>
+    </main>
+    <footer>&copy; 2023 Funny Ant</footer>
+
+    <script>
+      function calculate(operator) {
+        let number1 = Number(document.getElementById("number1").value);
+        let number2 = Number(document.getElementById("number2").value);
+        let result;
+        switch (operator) {
+          case "+":
+            result = number1 + number2;
+            break;
+          case "-":
+            result = number1 - number2;
+            break;
+          case "*":
+            result = number1 * number2;
+            break;
+          case "/":
+            result = number1 / number2;
+            break;
+          default:
+            throw new Error("Invalid Operator");
+        }
+        document.getElementById("result").value = result;
+      }
+    </script>
+  </body>
+</html>
